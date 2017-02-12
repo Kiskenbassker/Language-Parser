@@ -50,9 +50,7 @@ function parse_language_name($lang_name) {
     } else {
         $lang_code = $lang_name;
     }   
-    echo $lang_code;
+    return $lang_code;
 }
-
-parse_language_name("en-US");
 
 ?>
