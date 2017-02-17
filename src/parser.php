@@ -1,56 +1,75 @@
 <?php
 
+function parse_accept_string($accept) {
+    $lang_names = array();
+    $accept_language = explode(", ", $accept);
+    foreach($accept_language as $language) {
+        if(stristr($language, ";")) {
+            $lang_name = strstr($language, ";", true);
+        } else {
+            $lang_name = $language;
+        }
+    array_push($lang_names, $lang_name);
+    }
+    return($lang_names);
+}
 
+function parse_language_names($lang_names) {
+    $lang_codes = array();
+   foreach($lang_names as $lang_name) {
+       if(stristr($lang_name, "-")) {
+           $lang_code = strstr($lang_name, "-", true);
+       } else {
+           $lang_code = $lang_name;
+       }
+    array_push($lang_codes, $lang_code);
+   }
+    return $lang_codes;
+}
+
+function parse_language($lang_codes) {
+ 
 $lang_map = array(
-    "en" => "English",
-    "es" => "Español",
-    "de" => "Deutsch",
-    "it" => "Italiano",
-    "fr" => "Français",
-    "pl" => "Polski",
-    "ro" => "Română",
-    "kr" => "한국어",
-    "jp" => "日本語",
-    "cn" => "中國人",
-    "gr" => "Ελληνικά",
-    "ru" => "Русский",
-    "bg" => "Български",
-    "br" => "Português (BR)",
-    "vn" => "Tiếng Việt",
-    "ee" => "Еesti",
-    "nl" => "Nederlands",
-    "al" => "Shqiptar",
-    "se" => "Svenska",
-    "mn" => "Монгол",
-    "dk" => "Dansk",
-    "hu" => "Magyar",
-    "idn" => "Indonesia",
-    "cz" => "eština",
-    "no" => "orsk",
-    "tr" => "ürk",
-    "in" => "हिन्दी",
-    "ge" => "ართული",
-    "th" => "าษาไทย"
+    "en",
+    "es",
+    "de",
+    "it",
+    "fr",
+    "pl",
+    "ro",
+    "kr",
+    "jp",
+    "cn",
+    "gr",
+    "ru",
+    "bg",
+    "br",
+    "vn",
+    "ee",
+    "nl",
+    "al",
+    "se",
+    "mn",
+    "dk",
+    "hu",
+    "idn",
+    "cz",
+    "no",
+    "tr",
+    "in",
+    "ge",
+    "th"
 );
-
-
- /*function parse_language(){
-     $accept = "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4";
-     $accept_language = explode(",", $accept);
-     var_dump($accept_language);
-     $accept_language1 = $accept_language[0];
-     
- }*/
-
-function parse_language_name($lang_name) {
     
-    if(stristr($lang_name, "-")) {
-        $lang_arr = explode("-", $lang_name);
-        $lang_code = $lang_arr[0];
-    } else {
-        $lang_code = $lang_name;
-    }   
-    return $lang_code;
+    foreach($lang_codes as $lang_code) {
+        if(in_array($lang_code, $lang_map)) {
+            $lang = $lang_code;
+            break;
+        } else {
+            $lang = "en";
+        }
+    }
+    return($lang);
 }
 
 ?>
