@@ -122,12 +122,8 @@ final class ParsingTest extends TestCase
         		        $i++;
                 #};                      
             };# конец цикла
-
-	        
+      
 	    }
-	    # цикл перебора элементов массива с кодом языков
-	
-	
 /*
 	public function testSingleLangRu(): void # russian
 		    {
@@ -149,83 +145,7 @@ final class ParsingTest extends TestCase
 
 
 
-    /*public function testSingleLangEn(): void # english
-    {
-        $this->assertEquals(
-            'en',
-            parse_language('en')
-        );
-    }
-    public function testSingleLangRo(): void #romanian
-    {
-        $this->assertEquals(
-            'ro',
-            parse_language('ro')
-        );
-    }
-    public function testSingleLangGr(): void # greece
-    {
-        $this->assertEquals(
-            'gr',
-            parse_language('gr')
-        );
-    }
-    public function testSingleLangDe(): void #german 
-    {
-        $this->assertEquals(
-            'de',
-            parse_language('de')
-        );
-    }
-    public function testSingleLangIdn(): void
-    {
-        $this->assertEquals(
-            'idn',
-            parse_language('idn')
-        );
-    }
-    public function testSingleLangHu(): void # humgarian
-    {
-        $this->assertEquals(
-            'hu',
-            parse_language('hu')
-        );
-    }
-    public function testSingleLangNo(): void #norway
-    {
-        $this->assertEquals(
-            'no',
-            parse_language('no')
-        );
-    }
-    public function testSingleLangBr(): void #portugalian brazil
-    {
-        $this->assertEquals(
-            'br',
-            parse_language('br')
-        );
-    }
-    public function testSingleLangSe(): void #Svenska
-    {
-        $this->assertEquals(
-            'se',
-            parse_language('se')
-        );
-    }
-    public function testSingleLangTr(): void #Turkey
-    {
-        $this->assertEquals(
-            'tr',
-            parse_language('tr')
-        );
-    }
-    public function testSingleLangBg(): void #bolgarian
-    {
-        $this->assertEquals(
-            'bg',
-            parse_language('bg')
-        );
-    }*/
+   
 
 
 
