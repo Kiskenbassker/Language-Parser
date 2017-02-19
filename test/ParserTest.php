@@ -137,17 +137,5 @@ final class ParsingTest extends TestCase
 		        $this->assertEquals($expected, $actual,"ошибка в обработке языка без указания локали");
 		    }
 */
-
-
-
-
-
-
-
-
-   
-
-
-
 }
 ?>
