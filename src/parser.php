@@ -19,7 +19,7 @@ function parse_accept_string($accept) {
 
 /**
  * @param $lang_names array returned by parse_accept_string() function
- * @return array of values after removing all the symbols after "-"
+ * @return array of values after removing all the symbols after "-" symbol
  */
 function parse_language_names($lang_names) {
     $lang_codes = array();
