@@ -1,8 +1,9 @@
 <?php
 
 /**
+ * Exploding the Accept-Language string by comma
  * @param string $accept is an Accept-Language header value, i.e. fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
- * @return array as a result of exploding the string by comma
+ * @return array
  */
 
 function parse_accept_string($accept) {
@@ -20,8 +21,9 @@ function parse_accept_string($accept) {
 }
 
 /**
- * @param $lang_names array returned by parse_accept_string() function
- * @return array of values after removing all the symbols after "-" symbol
+ * Removing all the symbols after "-" in array, returned parse_accept_string() function
+ * @param $lang_names array
+ * @return array
  */
 function parse_language_names($lang_names) {
     $lang_codes = array();
@@ -43,8 +45,9 @@ $our_lang_codes = parse_language_names($our_lang_names);
 var_dump($our_lang_names);*/
 
 /**
- * @param $lang_codes array returned by parse_language_names() function
- * @return string language code
+ * Comparing values in array returned by parse_language_names() function with our language array and returning language code.
+ * @param $lang_codes array
+ * @return string
  */
 
 function parse_language($lang_codes) {
